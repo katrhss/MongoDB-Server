@@ -9,7 +9,7 @@ const requireAuth = require("./middlewares/requireAuth");
 
 const app = express();
 app.use(express.json());
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 app.use(postRouter);
 app.use(userRouter);
 
