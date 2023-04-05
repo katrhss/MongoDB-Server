@@ -2,7 +2,7 @@ require("express-async-errors");
 require("./db");
 const express = require("express");
 require("dotenv").config();
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const postRouter = require("./routers/place");
 const userRouter = require("./routers/user");
 const requireAuth = require("./middlewares/requireAuth");
