@@ -7,10 +7,13 @@ exports.createPlace = async (req, res) => {
   const newPlace = new Place({ title, details });
 
   if (file) {
-    const { secure_url, public_id } = await cloudinary.uploader.upload(
+    const { secure_url } = await cloudinary.uploader.upload(
       file.path
+      // const { secure_url, public_id } = await cloudinary.uploader.upload(
+      //   file.path
     );
-    newPlace.thumbnail = { url: secure_url, public_id };
+    newPlace.thumbnail = { uri: secure_url };
+    // newPlace.thumbnail = { url: secure_url, public_id };
   }
 
   await newPlace.save();

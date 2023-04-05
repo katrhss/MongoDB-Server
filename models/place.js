@@ -13,15 +13,15 @@ const placeSchema = mongoose.Schema({
   },
   thumbnail: {
     type: Object,
-    url: {
+    uri: {
       type: URL,
       required: true,
     },
-    public_id: {
-      type: String,
-      required: true,
-      unique: true,
-    },
+    // public_id: {
+    //   type: String,
+    //   required: true,
+    //   unique: true,
+    // },
   },
 });
 
