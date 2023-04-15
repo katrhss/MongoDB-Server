@@ -17,11 +17,15 @@ const placeSchema = mongoose.Schema({
       type: URL,
       required: true,
     },
-    // public_id: {
-    //   type: String,
-    //   required: true,
-    //   unique: true,
-    // },
+  },
+  coords: {
+    type: Object,
+    latitude: {
+      type: Number,
+    },
+    longitude: {
+      type: Number,
+    },
   },
 });
 
